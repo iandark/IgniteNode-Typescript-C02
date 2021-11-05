@@ -4,14 +4,16 @@ duration - number
 educator - string
 */
 
-interface ICOURSE {
+interface ICourse {
   name: string;
   duration?: number;
   educator: string;
 }
 
-export default class CreateCourseService {
-  static execute({ duration = 8, educator, name }: ICOURSE) {
+class CreateCourseService {
+  static execute({ duration = 8, educator, name }: ICourse) {
     console.log(name, duration, educator);
   }
 }
+
+export { CreateCourseService };
