@@ -6,7 +6,7 @@ import { categoriesRouter } from "./routes/categories.routes";
 const app = express();
 app.use(express.json());
 app.get("/", createCourse);
-app.use(categoriesRouter);
+app.use("/categories", categoriesRouter);
 
 app.post("/courses", (request, response) => {
   const { name } = request.body;
